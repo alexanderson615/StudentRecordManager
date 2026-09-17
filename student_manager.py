@@ -27,4 +27,14 @@ def add_student():
 
     print("Student added successfully")
 
-add_student()
+
+
+def view_students():
+    cursor.execute("SELECT * FROM student")
+
+    students = cursor.fetchall()
+
+    for student in students:
+        print(student)
+
+view_students()
